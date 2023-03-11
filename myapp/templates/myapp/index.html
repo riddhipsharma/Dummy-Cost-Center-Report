@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Excel file upload and processing : Django Example : ThePythonDjango.Com
+        </title>
+    </head>
+    <body style="margin-top: 30px;margin-left: 30px;">
+        <form action="{% url "myapp:index" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label>Upload previous month file: </label>
+            <input type="file"
+                   title="Upload previous month excel file"
+                   name="excel_file1"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <p>
+            <label>Upload current month file: </label>
+            <input type="file"
+                title="Upload current month excel file"
+                name="excel_file2"
+                style="border: 1px solid black; padding: 5px;"
+                required="required">
+            <p>
+            <input type="submit"
+                   value="Upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+
+        <p></p>
+        <hr>
+        
+    </body>
+</html>
