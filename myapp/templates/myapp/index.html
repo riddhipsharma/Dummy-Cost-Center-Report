@@ -1,32 +1,39 @@
 <html>
     <head>
         <title>
-            Excel file upload and processing : Django Example : ThePythonDjango.Com
+            LPTL
         </title>
     </head>
-    <body style="margin-top: 30px;margin-left: 30px;">
+    <body style="margin-top: 30px;margin-left: 30px; background-color: rgb(187, 236, 255);">
+        <h2>GENERATE DUMMY COST CENTER REPORT</h2>
+        <br>
+        <br>
+        <br>
+    
         <form action="{% url "myapp:index" %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <label>Upload previous month file: </label>
+            <label>Upload <b>previous</b> month file: </label>&nbsp;&nbsp;
             <input type="file"
                    title="Upload previous month excel file"
                    name="excel_file1"
                    style="border: 1px solid black; padding: 5px;"
                    required="required">
             <p>
-            <label>Upload current month file: </label>
+            <label>Upload <b>current</b> month file: </label> &nbsp; &nbsp;
             <input type="file"
                 title="Upload current month excel file"
                 name="excel_file2"
                 style="border: 1px solid black; padding: 5px;"
                 required="required">
             <p>
+            <br>
             <input type="submit"
                    value="Upload"
                    style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
         </form>
 
         <p></p>
+        <br><br>
         <hr>
         
     </body>
