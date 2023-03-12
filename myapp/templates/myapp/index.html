@@ -3,38 +3,68 @@
         <title>
             LPTL
         </title>
+        <style>
+
+            label{
+                color: aliceblue;
+                font-family:Verdana, Geneva, Tahoma, sans-serif ;
+                font-size: 15px;
+            }
+            h4{
+                text-align: center;
+                color: azure;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            input{
+                color: aliceblue;
+            }
+            .submit{
+                background-color: rgb(0, 90, 41);
+                font-size: 15px;
+            }
+        </style>
     </head>
-    <body style="margin-top: 30px;margin-left: 30px; background-color: rgb(187, 236, 255);">
-        <h2>GENERATE DUMMY COST CENTER REPORT</h2>
+    <body style="margin-top: 30px;margin-left: 30px; background-color: #0f405c">
+        <br><br><br><h4>GENERATE&nbsp;&nbsp;DUMMY&nbsp;&nbsp;COST&nbsp;&nbsp;CENTER&nbsp;&nbsp;REPORT</h4>
         <br>
-        <br>
-        <br>
+        <br><br>
+        
     
         <form action="{% url "myapp:index" %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <label>Upload <b>previous</b> month file: </label>&nbsp;&nbsp;
+            <p>
+            <label>Previous file : </label>&nbsp;&nbsp;
             <input type="file"
                    title="Upload previous month excel file"
                    name="excel_file1"
                    style="border: 1px solid black; padding: 5px;"
                    required="required">
+            </p>
             <p>
-            <label>Upload <b>current</b> month file: </label> &nbsp; &nbsp;
+            <label>Current file : </label> &nbsp; &nbsp;
             <input type="file"
                 title="Upload current month excel file"
                 name="excel_file2"
                 style="border: 1px solid black; padding: 5px;"
                 required="required">
-            <p>
+            </p>
             <br>
-            <input type="submit"
+            <br>
+            <input type="submit" class="submit"
                    value="Upload"
                    style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
         </form>
 
         <p></p>
         <br><br>
-        <hr>
+        
         
     </body>
 </html>
